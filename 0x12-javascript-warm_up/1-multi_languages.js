@@ -1,9 +1,10 @@
 #!/usr/bin/node
+/*
+Write a script that prints 3 lines:
 
-const cFun = 'C is fun';
-const pyCool = 'Python is cool';
-const jAmaze = 'JavaScript is amazing';
+The first line: “C is fun”
+The second line: “Python is cool”
+The third line: “Javascript is amazing”
+*/
 
-console.log(cFun);
-console.log(pyCool);
-console.log(jAmaze);
+console.log('C is fun\nPython is cool\nJavascript is amazing');

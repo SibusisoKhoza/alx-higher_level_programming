@@ -1,8 +1,9 @@
 #!/usr/bin/node
+/*
+Write a script that prints two arguments passed to it, in the following format: “ is ”
 
-const myVar1 = process.argv[2];
-const myVar2 = process.argv[3];
+You must use console.log(...) to print all output
+You are not allowed to use var
+*/
 
-const result = `${myVar1} is ${myVar2}`;
-
-console.log(result);
+console.log(process.argv[2] + ' is ' + process.argv[3]);
