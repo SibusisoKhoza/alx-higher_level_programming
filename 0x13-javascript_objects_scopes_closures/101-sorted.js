@@ -2,19 +2,20 @@
 /*
 Write a script that imports a dictionary of occurrences by user id and computes a dictionary of user ids by occurrence.
 
-Your script must import dict from the file 101-data.js
-In the new dictionary:
-A key is a number of occurrences
-A value is the list of user ids
-Print the new dictionary at the end
 */
-const dict = require('./101-data').dict;
-const newDict = {};
+const { dict } = require('./101-data');
 
-for (const key in dict) {
-  if (typeof (newDict[dict[key]]) === 'undefined') {
-    newDict[dict[key]] = [];
+// Create a new object to store occurrences as keys and user IDs as values
+const occurrencesDict = {};
+
+// Loop through the original dictionary to populate the occurrencesDict
+for (const userId in dict) {
+  const occurrences = dict[userId];
+  if (!occurrencesDict[occurrences]) {
+    occurrencesDict[occurrences] = [];
   }
-  newDict[dict[key]].push(key);
+  occurrencesDict[occurrences].push(userId);
 }
-console.log(newDict);
+
+// Printing the new dictionary at the end
+console.log(occurrencesDict);
