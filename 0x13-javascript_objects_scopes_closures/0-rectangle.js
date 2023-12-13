@@ -1,12 +1,8 @@
 #!/usr/bin/node
 
-// Define the Rectangle class
+// Write an empty class Rectangle that defines a rectangle:
+
 class Rectangle {
-    // Constructor for the Rectangle class
-    constructor() {
-      // Constructor logic, if needed
-    }
-  }
-  
-  module.exports = Rectangle; // Export the Rectangle class
-  
+}
+
+module.exports = Rectangle;
