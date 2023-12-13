@@ -1,10 +1,10 @@
 #!/usr/bin/node
 
-const myList = require('./100-data').list;
+const { list } = require('./100-data');
 
-const myList2 = myList.map((num, index) => {
-  return num * index;
-});
+// Using map to create a new array where each value is multiplied by its index
+const newList = list.map((value, index) => value * index);
 
-console.log(myList);
-console.log(myList2);
+// Printing the initial list and the new list
+console.log(list);
+console.log(newList);
