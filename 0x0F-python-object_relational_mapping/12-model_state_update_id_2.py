@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Changes the name of a State 
+Changes the name of a State
 """
 import sys
 from model_state import Base, State
