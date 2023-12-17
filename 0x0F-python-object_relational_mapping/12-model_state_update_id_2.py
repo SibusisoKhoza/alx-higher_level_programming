@@ -23,5 +23,4 @@ if __name__ == "__main__":
         record.name = name_new
 
     session.commit()
-
     session.close()
