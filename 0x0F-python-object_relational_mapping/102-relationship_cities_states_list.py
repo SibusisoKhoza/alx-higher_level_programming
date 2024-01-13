@@ -8,6 +8,7 @@ from sqlalchemy.orm import sessionmaker
 from relationship_state import Base, State
 from relationship_city import City
 
+
 def list_cities_states(username, password, db):
     """
     Lists all City objects from the database hbtn_0e_101_usa
@@ -31,6 +32,7 @@ def list_cities_states(username, password, db):
 
     # Close the session
     session.close()
+
 
 if __name__ == "__main__":
     # Check for the correct number of command line arguments
