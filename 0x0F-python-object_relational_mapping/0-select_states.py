@@ -2,9 +2,7 @@
 """
 lists all states from the database hbtn_0e_0_usa
 """
-
 import MySQLdb
-
 
 def print_state():
     from sys import argv
@@ -20,7 +18,7 @@ def print_state():
     cursor.close()
     db.close()
 
-
 if __name__ == "__main__":
     print_state()
+
     
