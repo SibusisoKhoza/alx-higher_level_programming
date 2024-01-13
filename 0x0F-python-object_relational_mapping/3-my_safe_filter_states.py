@@ -1,30 +1,27 @@
 #!/usr/bin/python3
 """
-    Prevent SQL Injection use "execute" with %s
+takes in an argument and displays all values in the
+states table of hbtn_0e_0_usa where name matches the argument.
+Safe from sql injection
 """
 
-
 import MySQLdb
-from sys import argv
+
+
+def print_n_state():
+    from sys import argv
+    db = MySQLdb.connect(host="localhost", user=argv[1],
+                         passwd=argv[2], database=argv[3])
+
+    cursor = db.cursor()
+
+    cursor.execute("SELECT * FROM states WHERE name LIKE %s", (argv[4],))
+    for rows in cursor.fetchall():
+        print(rows)
+
+    cursor.close()
+    db.close()
 
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(
-        host="localhost",
-        port=3306, user=argv[1],
-        passwd=argv[2],
-        db=argv[3])
-    cur = db.cursor()
-
-    sql = """
-    SELECT id, name FROM states WHERE
-    name COLLATE latin1_general_cs LIKE
-    %s ORDER BY id ASC;
-    """
-    cur.execute(sql, (argv[4], ))
-
-    rows = cur.fetchall()
-    for row in rows:
-        print(row)
-    cur.close()
-    db.close()
+    print_n_state()
