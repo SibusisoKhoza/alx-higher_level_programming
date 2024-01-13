@@ -25,5 +25,3 @@ def print_n_state():
 
 if __name__ == "__main__":
     print_n_state()
-
-    
